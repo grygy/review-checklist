@@ -85,6 +85,10 @@ It is based on my knowledge and included resources. It is not complete and will 
 - Check out POSA patterns.
 - Check out AOM patterns. You can read the basics [here](https://www.adaptiveobjectmodel.com/WICSA3/ArchitectureOfAOMsWICSA3.pdf).
 
+#### 13. Pipelines checking
+
+- Implement pipelines that will statically check the code before merging it to the main branch. 
+
 ## 1. TypeScript
 
 1. Use variable or helper method for complicated expression. Do not use complicated expression directly in `if` statement.
@@ -114,14 +118,36 @@ It is based on my knowledge and included resources. It is not complete and will 
     user.name = 'John';
     ```
 
+3. Use linter and formatter like [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/).
 
+    - Set up pipelines for checking the code before merging it to the main branch.
+    - Set up your IDE to format the code on save.
+    - I recommend using `@haaxor1689/eslint-config` and `@haaxor1689/prettier-config` packages.
+
+
+
+4. Don't be lazy and use meaninful names in `map`, `filter`,... functions.
+    
+    ```typescript
+    // Bad
+    const userNames = users.map((u) => u.name);
+
+    // Good
+    const userNames = users.map((user) => user.name);
+    ```
+
+5. Do not use `any`
+    
+    - Use specific type instead of `any`.
+    - I recommend using [Zod](https://zod.dev/) library for types and type checks.
 
 
 ### 1.1 React 
 1. Use functional components. Classes and constructors are obsolete.
 2. Use at least ES6 syntax with hooks (useState, useEffect, useRef, etc.)
 3. Use arrow functions for callbacks with async/await.
-
+4. Check incoming data with from server with `zod` or other library. (It's good to use GraphQL)
+5. Use `useMemo` and `useCallback` for memoization.
 
 
 ## Resources
