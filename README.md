@@ -1,6 +1,6 @@
 # Code review checklist
 
-This is a base checklist for code reviews. It stars with basics for most technologies and languages followed by more specific items regarding the language or technology.
+This is a base checklist for code reviews. It starts with basics for most technologies and languages, followed by more specific items regarding the language or technology.
 
 It is based on my knowledge and included resources. It is not complete and will be updated.
 
@@ -9,15 +9,15 @@ It is based on my knowledge and included resources. It is not complete and will 
 
 #### 1. Code is readable and understandable
 
-- I know that you want to show your powers and write oneliners everywhere or technology specific hacks, but please don't. Write the code as simple as possible. You are not writing code for yourself, but for your colleagues. Even your future self will be thankful for that.
+- I know that you want to show your powers and write oneliners everywhere or technology specific hacks, but please don't. Write the code as simple as possible. You are not writing code for yourself but for your colleagues. Even your future self will be thankful for that.
 
 #### 2. Minimize the use of comments
 
 - Try not to use comments in your code. If you need to explain your code, it means that it is not readable enough.
 
-#### 3. Code consistency within project
+#### 3. Code consistency within the project
     
-- Code is consistent with the rest of the project even if it's not most cutting edge formatting, naming, etc. --> If you want to change it, do it in the whole project (could end up badly).
+- Code is consistent with the rest of the project even if it's not the most cutting edge formatting, naming, etc. --> If you want to change it, do it in the whole project (could end up badly).
 
 #### 4. Follow naming conventions
 
@@ -57,17 +57,17 @@ It is based on my knowledge and included resources. It is not complete and will 
 
 #### 8. Refactoring is a must for bigger projects
 
-- Before submitting your code for review, look at your code one more time and think what can be improved. Do some refactoring.
+- Before submitting your code for review, look at your code one more time and think about what can be improved. Do some refactoring.
 
 #### 9. Test your code
 
-- Just write the tests. (It's really important)
+- Just write the tests. (It's essential)
 
 #### 10. Clean Git history and descriptive commit messages
 
-- Well, this is hard. Set up with your team clear rules how branches and commit messages should look like.
+- Well, this is hard. Set up with your team clear rules on how branches and commit messages should look like.
 - Commit, commit, commit. Smaller commits are better than one big commit.
-- I like adding ticket (issue) number to the end of the message (e.g. `Add new document file input (#123)`).
+- I like adding the ticket (issue) number to the end of the message (e.g. `Add new document file input (#123)`).
 - Check out this [article](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/) for more information about commit messages.
 
 #### 11. SOLID
@@ -91,7 +91,7 @@ It is based on my knowledge and included resources. It is not complete and will 
 
 ## 1. TypeScript
 
-1. Use variable or helper method for complicated expression. Do not use complicated expression directly in `if` statement.
+1. Use variable or helper method for complicated expressions. Do not use complicated expressions directly in `if` statement.
 
     ```typescript
     // Bad
@@ -126,7 +126,7 @@ It is based on my knowledge and included resources. It is not complete and will 
 
 
 
-4. Don't be lazy and use meaninful names in `map`, `filter`,... functions.
+4. Don't be lazy and use meaningful names in `map`, `filter`,... functions.
     
     ```typescript
     // Bad
@@ -147,9 +147,9 @@ It is based on my knowledge and included resources. It is not complete and will 
 1. Use functional components. Classes and constructors are obsolete.
 2. Use at least ES6 syntax with hooks (useState, useEffect, useRef, etc.)
 3. Use arrow functions for callbacks with async/await.
-4. Check incoming data with from server with `zod` or other library. (It's good to use GraphQL)
+4. Check incoming data from server with `zod` or another library. (It's good to use GraphQL)
 5. Use `useMemo` and `useCallback` for memoization.
-6. Handle errors with `try/catch/finally` blocks. Especially from Backend.
+6. Handle errors with `try/catch/finally` blocks, especially from Backend.
 
 
 ## Resources
