@@ -140,6 +140,7 @@ It is based on my knowledge and included resources. It is not complete and will 
     
     - Use specific type instead of `any`.
     - I recommend using [Zod](https://zod.dev/) library for types and type checks.
+    - Use `type` instead of `interface`.
 
 
 ### 1.1 React 
@@ -148,6 +149,7 @@ It is based on my knowledge and included resources. It is not complete and will 
 3. Use arrow functions for callbacks with async/await.
 4. Check incoming data with from server with `zod` or other library. (It's good to use GraphQL)
 5. Use `useMemo` and `useCallback` for memoization.
+6. Handle errors with `try/catch/finally` blocks. Especially from Backend.
 
 
 ## Resources
@@ -155,3 +157,4 @@ It is based on my knowledge and included resources. It is not complete and will 
 - https://www.techighness.com/post/react-js-code-review-checklist/
 - https://dev.to/michi/tips-on-naming-boolean-variables-cleaner-code-35ig
 - https://workat.tech/machine-coding/tutorial/writing-meaningful-variable-names-clean-code-za4m83tiesy0
+- https://microsoft.github.io/code-with-engineering-playbook/code-reviews/process-guidance/reviewer-guidance/
