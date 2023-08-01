@@ -83,7 +83,7 @@ It is based on my knowledge and included resources. It is not complete and will 
 - Use design patterns when needed. Do not overuse them. Do not use them just because you can.
 - Check out [Refactoring Guru](https://refactoring.guru/design-patterns) for GoF design patterns.
 - Check out POSA patterns.
-- Check out AOM patterns.
+- Check out AOM patterns. You can read the basics [here](https://www.adaptiveobjectmodel.com/WICSA3/ArchitectureOfAOMsWICSA3.pdf).
 
 ## 1. TypeScript
 
