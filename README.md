@@ -19,21 +19,18 @@ It is based on my knowledge and included resources. It is not complete and will 
     
 - Code is consistent with the rest of the project even if it's not the most cutting edge formatting, naming, etc. --> If you want to change it, do it in the whole project (could end up badly).
 
-#### 4. Follow naming conventions
-
-- Every language has its own naming conventions. Follow them. 
-
-#### 5. DRY (Don't repeat yourself)
+#### 4. DRY (Don't repeat yourself)
 
 - If you have to repeat yourself, you are doing something wrong. Try to find a way to reuse your code. Introduce abstraction, do some refactoring, etc.
 
-#### 6. Use meaningful names
+#### 5. Use meaningful names
 
 - Use meaningful names for variables, methods, classes, etc. Do not use abbreviations. Do not use single letter names. Do not use names like `v`, `value`, `res`, `data`, etc. Use names that describe what the variable, method, class, etc. is doing (e.g. `courseDurationInDays`)
 - Use prefix `is` or `has` for booleans. Do not use negations in variable names (e.g. `isUserNotActive`).
 - Add units to variables (e.g. `courseDurationInDays` instead of `courseDuration`)
+- Every language has its own naming conventions. Follow them. 
 
-#### 7. Never use string literals or magic numbers
+#### 6. Never use string literals or magic numbers
 
 - Do not use string literals or magic numbers in your code. Use constants or variables instead.
 
@@ -55,22 +52,22 @@ It is based on my knowledge and included resources. It is not complete and will 
     }
     ```
 
-#### 8. Refactoring is a must for bigger projects
+#### 7. Refactoring is a must for bigger projects
 
 - Before submitting your code for review, look at your code one more time and think about what can be improved. Do some refactoring.
 
-#### 9. Test your code
+#### 8. Test your code
 
 - Just write the tests. (It's essential)
 
-#### 10. Clean Git history and descriptive commit messages
+#### 9. Clean Git history and descriptive commit messages
 
 - Well, this is hard. Set up with your team clear rules on how branches and commit messages should look like.
 - Commit, commit, commit. Smaller commits are better than one big commit.
 - I like adding the ticket (issue) number to the end of the message (e.g. `Add new document file input (#123)`).
 - Check out this [article](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/) for more information about commit messages.
 
-#### 11. SOLID
+#### 10. SOLID
 
 - S : The single-responsibility principle: "There should never be more than one reason for a class to change. In other words, every class should have only one responsibility."
 - O : The open–closed principle: "Software entities ... should be open for extension, but closed for modification."
@@ -78,14 +75,14 @@ It is based on my knowledge and included resources. It is not complete and will 
 - I : The interface segregation principle: "Many client-specific interfaces are better than one general-purpose interface."
 - D : The dependency inversion principle: "Depend upon abstractions, [not] concretions."
 
-#### 12. Design patterns
+#### 11. Design patterns
 
 - Use design patterns when needed. Do not overuse them. Do not use them just because you can.
 - Check out [Refactoring Guru](https://refactoring.guru/design-patterns) for GoF design patterns.
 - Check out POSA patterns.
 - Check out AOM patterns. You can read the basics [here](https://www.adaptiveobjectmodel.com/WICSA3/ArchitectureOfAOMsWICSA3.pdf).
 
-#### 13. Pipelines checking
+#### 12. Pipelines checking
 
 - Implement pipelines that will statically check the code before merging it to the main branch. 
 
