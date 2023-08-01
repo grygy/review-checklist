@@ -11,9 +11,9 @@ It is based on my knowledge and included resources. It is not complete and will 
 
 - I know that you want to show your powers and write oneliners everywhere or technology specific hacks, but please don't. Write the code as simple as possible. You are not writing code for yourself, but for your colleagues. Even your future self will be thankful for that.
 
-#### 2. Do not use comments
+#### 2. Minimize the use of comments
 
-- Try not to use comments in your code. If you need to write comments, it means that the code is not readable enough.
+- Try not to use comments in your code. If you need to explain your code, it means that it is not readable enough.
 
 #### 3. Code consistency within project
     
