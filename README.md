@@ -70,7 +70,15 @@ It is based on my knowledge and included resources. It is not complete and will 
 - I like adding ticket (issue) number to the end of the message (e.g. `Add new document file input (#123)`).
 - Check out this [article](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/) for more information about commit messages.
 
-#### 11. Design patterns
+#### 11. SOLID
+
+- S : The single-responsibility principle: "There should never be more than one reason for a class to change. In other words, every class should have only one responsibility."
+- O : The open–closed principle: "Software entities ... should be open for extension, but closed for modification."
+- L : The Liskov substitution principle: "Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it. See also design by contract."
+- I : The interface segregation principle: "Many client-specific interfaces are better than one general-purpose interface."
+- D : The dependency inversion principle: "Depend upon abstractions, [not] concretions."
+
+#### 12. Design patterns
 
 - Use design patterns when needed. Do not overuse them. Do not use them just because you can.
 - Check out [Refactoring Guru](https://refactoring.guru/design-patterns) for GoF design patterns.
