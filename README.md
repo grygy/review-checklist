@@ -139,14 +139,55 @@ It is based on my knowledge and included resources. It is not complete and will 
     - I recommend using [Zod](https://zod.dev/) library for types and type checks.
     - Use `type` instead of `interface`.
 
+6. Use arrow functions
+    ```typescript
+    // Bad
+    function sum(a: number, b: number): number {
+        return a + b;
+    }
+
+    // Good
+    const sum = (a: number, b: number): number => a + b;
+    ```
+
+7. Use `async/await` instead of `then` chains
+    ```typescript
+    // Bad
+    fetch('https://example.com')
+        .then((usersResponse) => usersResponse.json())
+        .then((users) => console.log(users));
+
+    // Good
+    const usersResponse = await fetch('https://example.com');
+    const users = await usersResponse.json();
+    console.log(users);
+    ```
+
 
 ### 1.1 React 
 1. Use functional components. Classes and constructors are obsolete.
 2. Use at least ES6 syntax with hooks (useState, useEffect, useRef, etc.)
-3. Use arrow functions for callbacks with async/await.
 4. Check incoming data from server with `zod` or another library. (It's good to use GraphQL)
 5. Use `useMemo` and `useCallback` for memoization.
 6. Handle errors with `try/catch/finally` blocks, especially from Backend.
+7. Use [TanStack Query](https://tanstack.com/query/latest) for managing async calls to backend.
+    1. You can use it for managing the cache.
+
+        ```typescript
+        // Bad
+        const [users, setUsers] = useState<User[]>([]);
+        useEffect(() => {
+            fetch('https://example.com/users')
+                .then((usersResponse) => usersResponse.json())
+                .then((users) => setUsers(users));
+        }, []);
+
+        // Good
+        const { data: users } = useQuery<User[]>(['get', 'users'], () => {
+            const usersResponse = await fetch('https://example.com/users');
+            return usersResponse.json();
+        });
+        ```
 
 
 ## Resources
