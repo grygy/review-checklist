@@ -183,7 +183,7 @@ It is based on my knowledge and included resources. It is not complete and will 
         }, []);
 
         // Good
-        const { data: users } = useQuery<User[]>(['get', 'users'], () => {
+        const { data: users } = useQuery<User[]>(['get', 'users'], async () => {
             const usersResponse = await fetch('https://example.com/users');
             return usersResponse.json();
         });
