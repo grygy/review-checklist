@@ -168,6 +168,24 @@ It is based on my knowledge and included resources. It is not complete and will 
 1. Use functional components. Classes and constructors are obsolete.
 2. Use at least ES6 syntax with hooks (useState, useEffect, useRef, etc.)
 4. Check incoming data from server with `zod` or another library. (It's good to use GraphQL)
+    - Recommended usage of `zod`
+        ```typescript
+        import { z } from 'zod';
+        
+        export const UserModel = z.object({
+            id: z.string(),
+            name: z.string(),
+            age: z.number(),
+        });
+
+        // Validation data in forms can be different from data in backend (old data can be invalid)
+        export const UserCheck = UserModel.extend({
+            name: z.string().min(1).max(255),
+            age: z.number().min(18),
+        });
+
+        export type UserType = z.infer<typeof UserModel>;
+        ```
 5. Use `useMemo` and `useCallback` for memoization.
 6. Handle errors with `try/catch/finally` blocks, especially from Backend.
 7. Use [TanStack Query](https://tanstack.com/query/latest) for managing async calls to backend.
